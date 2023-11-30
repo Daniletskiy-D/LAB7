@@ -19,7 +19,9 @@ if __name__ == '__main__':
     if len(positivs) >= 2:
         start_in = positivs[0]
         end_in = positivs[1]
-        sum_between = sum([a[i] for i in range(start_in + 1, end_in)])
+        sum_between = sum(value for idx, value in enumerate(
+                            a[start_in + 1:end_in], start=start_in + 1)
+                        )
         print("Сумма элементов:", sum_between)
     else:
         print("Недостаточно положительных элементов в списке.")

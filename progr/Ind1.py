@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-
 import sys
 
 
@@ -14,9 +13,10 @@ if __name__ == '__main__':
 
     count_zeros = 0
 
-    for i in range(len(a)):
-        if a[i] == 0:
+    for index, value in enumerate(a):
+        if value == 0:
             count_zeros += 1
-            print("Нулевой элемент найден на индексе:", i)
+            print("Нулевой элемент найден на индексе:", index)
 
     print("Общее количество нулевых элементов:", count_zeros)
+    
